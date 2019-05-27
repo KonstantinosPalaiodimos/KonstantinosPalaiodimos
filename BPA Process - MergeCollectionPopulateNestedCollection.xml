@@ -1,0 +1,479 @@
+﻿<process name="MergeCollectionPopulateNestedCollection" version="1.0" bpversion="6.4.1.9862" narrative="Get familiar with more advanced aspects of Colletion and Sub-Collection manipulation" byrefcollection="true" preferredid="ed600972-3b3d-4fea-9541-fe7574acdc0f">
+  <view>
+    <camerax>0</camerax>
+    <cameray>36</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="036fa129-6e6d-4671-bd02-8798e6c31dcc" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="90310218-e1b4-425f-8551-06dcf3cb65ed" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-225</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>a9241656-bfbf-44c9-a20d-3f2eb757af35</onsuccess>
+  </stage>
+  <stage stageid="09e76288-313b-4f23-a931-f417d532afff" name="Collection 1" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>105</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="A_id" type="text" />
+      <field name="Bid" type="text" />
+      <field name="PCid" type="text" />
+      <field name="Bname" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="A_id" type="text" value="1" />
+        <field name="Bid" type="text" value="10" />
+        <field name="PCid" type="text" value="100" />
+        <field name="Bname" type="text" value="1000" />
+      </row>
+      <row>
+        <field name="A_id" type="text" value="2" />
+        <field name="Bid" type="text" value="11" />
+        <field name="PCid" type="text" value="111" />
+        <field name="Bname" type="text" value="1111" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="c2c929e5-39b9-41e2-b856-9a2dba1e421f" name="Collection 2" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>105</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="A_ref" type="text" />
+      <field name="Cid" type="text" />
+      <field name="Cname" type="text" />
+      <field name="value" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="A_ref" type="text" value="1" />
+        <field name="Cid" type="text" value="20" />
+        <field name="Cname" type="text" value="200" />
+        <field name="value" type="text" value="2000" />
+      </row>
+      <row>
+        <field name="A_ref" type="text" value="2" />
+        <field name="Cid" type="text" value="22" />
+        <field name="Cname" type="text" value="222" />
+        <field name="value" type="text" value="2222" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="1016c4ca-72e3-441f-9cb7-8dd0642a164b" name="Collection 3" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>195</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="action" type="text" />
+      <field name="colA" type="collection">
+        <field name="Bid" type="text" />
+        <field name="PCid" type="text" />
+        <field name="Bname" type="text" />
+        <field name="colB" type="collection">
+          <field name="Cid" type="text" />
+          <field name="Cname" type="text" />
+          <field name="value" type="text" />
+        </field>
+      </field>
+    </collectioninfo>
+  </stage>
+  <stage stageid="8dada251-e39d-423a-844d-d7f4188c618f" name="Anchor14" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>240</displayx>
+    <displayy>255</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>d318f946-85e6-4eda-95a6-3ac1adf372bd</onsuccess>
+  </stage>
+  <stage stageid="81bc764e-e1dd-46fe-9dbd-00b2fcebb78b" name="Anchor15" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>240</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>8dada251-e39d-423a-844d-d7f4188c618f</onsuccess>
+  </stage>
+  <stage stageid="3d473099-b3e4-43d5-b96b-a711d4e61d26" name="Add row to Collection 3" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Collection 3&quot;" />
+    </inputs>
+    <onsuccess>97d19262-df9c-43fe-b158-8fce42f5d8eb</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Add Row" />
+  </stage>
+  <stage stageid="4e19172d-7a30-4820-b689-5e80d242d638" name="Inside Collection" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>195</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="colB" type="collection" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="471fb772-197d-440a-9fe8-2f6ea696d0c3" name="SubCollection1" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>285</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="54c7ab71-dbe7-468a-ba12-49c9b9c8b65d" name="Remove Column colA" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>30</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Field Name" narrative="The field to delete." expr="&quot;A_id&quot;" />
+      <input type="collection" name="Collection In" narrative="The collection to delete the field from." expr="[SubCollection1]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Collection Out" narrative="The collection with the field removed." stage="SubCollection1" />
+    </outputs>
+    <onsuccess>eb261130-da39-44de-916f-ff2b31d63fbb</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Delete Field" />
+  </stage>
+  <stage stageid="c52e7776-0442-40a1-9a7d-23941b764aee" name="Append rows to colA" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="collection" name="Main Collection" narrative="The collection to append to." expr="[Collection 3.colA]" />
+      <input type="collection" name="Collection to Append" narrative="The collection to append." expr="[SubCollection1]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" narrative="The combined collection." stage="Collection 3.colA" />
+    </outputs>
+    <onsuccess>bcc10fef-b57e-4163-a728-51f9ba93e75e</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="eb261130-da39-44de-916f-ff2b31d63fbb" name="Remove Column colB" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>75</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Field Name" narrative="The field to delete." expr="&quot;A_ref&quot;" />
+      <input type="collection" name="Collection In" narrative="The collection to delete the field from." expr="[SubCollection2]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Collection Out" narrative="The collection with the field removed." stage="SubCollection2" />
+    </outputs>
+    <onsuccess>5562ea0e-a415-4b80-8be6-7d3287eafe09</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Delete Field" />
+  </stage>
+  <stage stageid="69fece1d-38a4-4319-b2ce-65ca2c5d5c9e" name="SubCollection2" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>285</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ff704bc6-8280-4099-a0b2-1bab1d7eb610" name="Get next row Collection 1" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="Start Row" narrative="The row index to start copying from. The index is from 0 to N-1 (where N is the total number of rows in the collection)." expr="[Start Counter]" />
+      <input type="number" name="Number of Rows to Copy" narrative="The number of rows to copy." expr="1" />
+      <input type="collection" name="Source Collection" narrative="The collection to copy." expr="[Collection 1]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Output Collection" narrative="The copied collection." stage="SubCollection1" />
+    </outputs>
+    <onsuccess>37ebcbc5-5b21-4394-8655-c901c5ea40cb</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Copy Rows" />
+  </stage>
+  <stage stageid="a9241656-bfbf-44c9-a20d-3f2eb757af35" name="Get rows number" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-225</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Collection 1&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" narrative="The number of rows counted in the collection" stage="Counter" />
+    </outputs>
+    <onsuccess>3d473099-b3e4-43d5-b96b-a711d4e61d26</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="6f3fdd41-e47a-46e5-8e13-9d0009ddb498" name="Start Counter" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>0</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a09c957a-0b27-4a61-bcbd-616032da7976" name="Counter" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>0</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bcc10fef-b57e-4163-a728-51f9ba93e75e" name="More Rows?" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Start Counter] &lt; [Counter]" />
+    <ontrue>ff704bc6-8280-4099-a0b2-1bab1d7eb610</ontrue>
+    <onfalse>95a326d8-1c7b-4769-970c-ad71e55eb8e3</onfalse>
+  </stage>
+  <stage stageid="95a326d8-1c7b-4769-970c-ad71e55eb8e3" name="End3" type="End">
+    <narrative>
+    </narrative>
+    <displayx>225</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="37ebcbc5-5b21-4394-8655-c901c5ea40cb" name="Get next row Collection 2" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="Start Row" narrative="The row index to start copying from. The index is from 0 to N-1 (where N is the total number of rows in the collection)." expr="[Start Counter]" />
+      <input type="number" name="Number of Rows to Copy" narrative="The number of rows to copy." expr="1" />
+      <input type="collection" name="Source Collection" narrative="The collection to copy." expr="[Collection 2]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Output Collection" narrative="The copied collection." stage="SubCollection2" />
+    </outputs>
+    <onsuccess>50a406fe-60b4-4547-9d39-b579ceb00bea</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Copy Rows" />
+  </stage>
+  <stage stageid="d318f946-85e6-4eda-95a6-3ac1adf372bd" name="Increase Counter" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>255</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>a286abff-2a6a-4d3f-8fd1-2653ae9a64f6</onsuccess>
+    <calculation expression="[Start Counter] + 1" stage="Start Counter" />
+  </stage>
+  <stage stageid="a286abff-2a6a-4d3f-8fd1-2653ae9a64f6" name="Anchor16" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>255</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>e482efd6-4d6a-4142-9cac-b0afbeccbbd9</onsuccess>
+  </stage>
+  <stage stageid="e482efd6-4d6a-4142-9cac-b0afbeccbbd9" name="Anchor17" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>bcc10fef-b57e-4163-a728-51f9ba93e75e</onsuccess>
+  </stage>
+  <stage stageid="5562ea0e-a415-4b80-8be6-7d3287eafe09" name="Set Inside Collection to SubCollection1" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>120</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="collection" name="Collection 1" narrative="The first collection to be merged." expr="[SubCollection1]" />
+      <input type="collection" name="Collection 2" narrative="The second collection to be merged." expr="[Inside Collection]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Collection 3" narrative="The resulting merged collection." stage="SubCollection1" />
+    </outputs>
+    <onsuccess>e498641d-31f7-47d8-bec2-db761446c9aa</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Merge Collection" />
+  </stage>
+  <stage stageid="e498641d-31f7-47d8-bec2-db761446c9aa" name="Append rows to SubCollection1.colB" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>165</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="collection" name="Main Collection" narrative="The collection to append to." expr="[SubCollection1.colB]" />
+      <input type="collection" name="Collection to Append" narrative="The collection to append." expr="[SubCollection2]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" narrative="The combined collection." stage="SubCollection1.colB" />
+    </outputs>
+    <onsuccess>ef17e05b-addf-4499-82c3-4c21e3a049d3</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="ef17e05b-addf-4499-82c3-4c21e3a049d3" name="Append rows to colB" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>210</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="collection" name="Main Collection" narrative="The collection to append to." expr="[Collection 3.colA]" />
+      <input type="collection" name="Collection to Append" narrative="The collection to append." expr="[SubCollection1]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" narrative="The combined collection." stage="Collection 3.colA" />
+    </outputs>
+    <onsuccess>d318f946-85e6-4eda-95a6-3ac1adf372bd</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="97d19262-df9c-43fe-b158-8fce42f5d8eb" name="Set Inside Collection to colA" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="collection" name="Collection 1" narrative="The first collection to be merged." expr="[Collection 3.colA]" />
+      <input type="collection" name="Collection 2" narrative="The second collection to be merged." expr="[Inside Collection]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Collection 3" narrative="The resulting merged collection." stage="Collection 3.colA" />
+    </outputs>
+    <onsuccess>c52e7776-0442-40a1-9a7d-23941b764aee</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Merge Collection" />
+  </stage>
+  <stage stageid="50a406fe-60b4-4547-9d39-b579ceb00bea" name="Valid Condition ?" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[SubCollection2.A_ref] = [SubCollection1.A_id]" />
+    <ontrue>54c7ab71-dbe7-468a-ba12-49c9b9c8b65d</ontrue>
+    <onfalse>81bc764e-e1dd-46fe-9dbd-00b2fcebb78b</onfalse>
+  </stage>
+  <stage stageid="0da56dc8-fe48-4063-a4ae-c0aa1cc2f371" name="Collections" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>-270</displayx>
+    <displayy>60</displayy>
+    <displaywidth>255</displaywidth>
+    <displayheight>270</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="2e2a32e7-bdbb-4b84-9212-9e83b293be7a" name="Counter Variables" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>-270</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>255</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="C0C0C0" />
+  </stage>
+</process>
